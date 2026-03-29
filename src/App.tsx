@@ -1,8 +1,15 @@
-export default function App() {
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import OrderDetailPage from './pages/OrderDetailPage';
+import TaskManagementPage from './pages/TaskManagementPage';
+
+function App() {
   return (
-    <div style={{ fontFamily: 'system-ui', padding: '2rem', maxWidth: 800, margin: '0 auto' }}>
-      <h1>Open Order Backlog Remediation</h1>
-      <p>Project scaffold ready. Start building!</p>
-    </div>
+    <Routes>
+      <Route path="/order/:orderId" element={<OrderDetailPage />} />
+      <Route path="/tasks" element={<TaskManagementPage />} />
+    </Routes>
   );
 }
+
+export default App;
