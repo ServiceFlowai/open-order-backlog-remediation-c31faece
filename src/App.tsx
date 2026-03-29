@@ -1,8 +1,17 @@
-export default function App() {
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Dashboard from './pages/Dashboard';
+import Feedback from './components/Feedback';
+
+const App: React.FC = () => {
   return (
-    <div style={{ fontFamily: 'system-ui', padding: '2rem', maxWidth: 800, margin: '0 auto' }}>
-      <h1>Open Order Backlog Remediation</h1>
-      <p>Project scaffold ready. Start building!</p>
+    <div className="app-container">
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+      <Feedback />
     </div>
   );
-}
+};
+
+export default App;
