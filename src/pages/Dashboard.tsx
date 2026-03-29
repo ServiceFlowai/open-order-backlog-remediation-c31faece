@@ -1,17 +1,11 @@
 import React from 'react';
-import { usePilotMode } from '../utils/pilotMode';
 
-const Dashboard: React.FC = () => {
-  const { isPilotMode, togglePilotMode } = usePilotMode();
-
+const Dashboard = () => {
   return (
-    <div className="dashboard">
-      <h1>Dashboard</h1>
-      <button onClick={togglePilotMode} className="btn-toggle-pilot">
-        {isPilotMode ? 'Disable Pilot Mode' : 'Enable Pilot Mode'}
-      </button>
-      <div className="kpi-cards">
-        {/* KPI cards and other dashboard elements */}
+    <div className="p-4">
+      <h1 className="text-2xl font-bold">Dashboard</h1>
+      <div className="mt-4">
+        {/* Add KPI Cards and Charts here */}
       </div>
     </div>
   );

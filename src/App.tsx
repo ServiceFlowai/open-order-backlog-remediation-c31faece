@@ -1,17 +1,17 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
-import Feedback from './components/Feedback';
+import Notifications from './pages/Notifications';
+import RootCauseAnalytics from './pages/RootCauseAnalytics';
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="app-container">
-      <Routes>
-        <Route path="/" element={<Dashboard />} />
-      </Routes>
-      <Feedback />
-    </div>
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/notifications" element={<Notifications />} />
+      <Route path="/root-cause-analytics" element={<RootCauseAnalytics />} />
+    </Routes>
   );
-};
+}
 
 export default App;
